@@ -1,0 +1,61 @@
+<div class="container">
+  
+    <div style="text-align: center; margin: auto; width: 30%; margin-bottom: 30px; margin-top: 50px" >
+    <div class="form-group">
+      <input size="14" class="form-control" type="text" [(ngModel)]="str" (ngModelChange)="pretraga(); provera();" placeholder="Search username">
+    </div>
+    <button *ngIf="showButton" class="btn btn-outline-primary" (click)='setSearch()'>Open private chat</button>
+
+  </div>
+
+  <div style="text-align: center; margin-bottom: 100px">
+
+    <div style="overflow-y:scroll; overflow-x:hidden; height:400px; width: 16%" class="parts">
+      <div *ngFor="let user of sUserUnreads|orderBy:'unread'">
+        <button class="btn btn-outline-success" style="width: 147px;" (click)='setReciever(user.username);'>
+          {{user.username}}<i *ngIf="user.unread>=0" class="fa fa-circle" aria-hidden="true" style="font-size: 5px; float: right; margin-top: 11px"></i><span style="color: blue;float: right" *ngIf="!user.unread==0">{{user.unread*-1}}</span>
+        </button>
+      </div>
+    </div>
+
+    <div style="width: 50%" class="parts">
+      
+      <div style="overflow-y:scroll; overflow-x:hidden; height:218px">
+        <div *ngFor="let el of lista">
+          <p *ngIf="el.receiver == 'everyone'">{{el.sender}}: {{el.body}}</p>
+        </div> 
+      </div>
+    
+      <div >
+        <div class="form-group">
+          <textarea placeholder="Enter a message" [(ngModel)]="msg" class="form-control" rows="5" ></textarea>
+        </div>  
+        <button class="btn btn-outline-primary" type="button" (click)="sendToEveryone()">Send to Everyone</button>
+      </div>
+  
+    </div>
+
+    <div *ngIf="openPrivate" style="width: 34%" class="parts">
+    
+      <div style="overflow-y:scroll; overflow-x:hidden; height:218px">
+        <div *ngFor="let el of lista">
+            <p *ngIf="((el.receiver == username && el.sender == receiver) || ( el.sender == username && el.receiver == receiver) && el.receiver != 'everyone') ">{{el.sender}}: {{el.body}}</p>
+        </div> 
+      </div>
+    
+      <div >
+        <div class="form-group">
+          <textarea placeholder="Enter a private message for {{receiver}}" [(ngModel)]="msgForPrivate" class="form-control" rows="5" (click)="resetUnread(receiver)" ></textarea>
+        </div>  
+        <button class="btn btn-outline-primary" type="button" (click)="send()">Send to {{receiver}}</button>
+        <button class="btn btn-outline-danger" type="button" (click)=closePrivate()>Close</button>
+      </div>
+  
+    </div>
+
+  </div>
+
+
+  
+
+</div>

@@ -1,0 +1,49 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-2">
+      <h3>Edit the Student !</h3>
+      <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label class="col-xs-4">First Name: </label>
+          <input type="text" class="form-control" formControlName="firstName" #firstName
+            [(ngModel)]="student.firstName" />
+        </div>
+        <div
+          *ngIf="angForm.controls['firstName'].invalid && (angForm.controls['firstName'].dirty || angForm.controls['firstName'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['firstName'].errors.required">
+            First Name is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4">Last Name: </label>
+          <input type="text" class="form-control" formControlName="lastName" #lastName [(ngModel)]="student.lastName" />
+        </div>
+        <div
+          *ngIf="angForm.controls['lastName'].invalid && (angForm.controls['lastName'].dirty || angForm.controls['lastName'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['lastName'].errors.required">
+            Last Name is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4">Card Number: </label>
+          <input type="text" class="form-control" formControlName="cardNumber" #cardNumber
+            [(ngModel)]="student.cardNumber" />
+        </div>
+        <div
+          *ngIf="angForm.controls['cardNumber'].invalid && (angForm.controls['cardNumber'].dirty || angForm.controls['cardNumber'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['cardNumber'].errors.required">
+            Card Number is required.
+          </div>
+        </div>
+        <div class="form-group" style="padding-top:20px;">
+          <button (click)="updateStudent(firstName.value, lastName.value, cardNumber.value)"
+            [disabled]="angForm.invalid" class="btn btn-primary"><i class="fa fa-refresh"></i>
+            Update Student</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

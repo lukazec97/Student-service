@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document
+	xmlns="http://www.six-interbank-clearing.com/de/pain.002.001.03.ch.02.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.six-interbank-clearing.com/de/pain.002.001.03.ch.02.xsd pain.002.001.03.ch.02.xsd">
+	<CstmrPmtStsRpt>
+		<GrpHdr>
+			<MsgId>20181029375204079621459</MsgId>
+			<CreDtTm>2018-10-30T00:01:44</CreDtTm>
+			<InitgPty>
+				<Id>
+					<OrgId>
+						<BICOrBEI>POFICHBE</BICOrBEI>
+					</OrgId>
+				</Id>
+			</InitgPty>
+		</GrpHdr>
+		<OrgnlGrpInfAndSts>
+			<OrgnlMsgId>224</OrgnlMsgId>
+			<OrgnlMsgNmId>pain.001.001.03.ch.02</OrgnlMsgNmId>
+			<GrpSts>ACTC</GrpSts>
+		</OrgnlGrpInfAndSts>
+	</CstmrPmtStsRpt>
+</Document>

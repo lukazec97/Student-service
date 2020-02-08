@@ -1,0 +1,16 @@
+/* .container1 {
+    display: flex;
+  }
+  .container1 > div {
+    flex: 1;} 
+ */
+
+.parts {
+  display: inline-block;
+}
+
+textarea {
+  resize: none;
+}
+
+

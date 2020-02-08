@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document
+	xmlns="http://www.six-interbank-clearing.com/de/pain.002.001.03.ch.02.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.six-interbank-clearing.com/de/pain.002.001.03.ch.02.xsd pain.002.001.03.ch.02.xsd">
+	<CstmrPmtStsRpt>
+		<GrpHdr>
+			<MsgId>20181027375204079095949</MsgId>
+			<CreDtTm>2018-10-27T18:02:15</CreDtTm>
+			<InitgPty>
+				<Id>
+					<OrgId>
+						<BICOrBEI>POFICHBE</BICOrBEI>
+					</OrgId>
+				</Id>
+			</InitgPty>
+		</GrpHdr>
+		<OrgnlGrpInfAndSts>
+			<OrgnlMsgId>216</OrgnlMsgId>
+			<OrgnlMsgNmId>pain.001.001.03.ch.02</OrgnlMsgNmId>
+		</OrgnlGrpInfAndSts>
+		<OrgnlPmtInfAndSts>
+			<OrgnlPmtInfId>216</OrgnlPmtInfId>
+			<PmtInfSts>RJCT</PmtInfSts>
+			<StsRsnInf>
+				<Orgtr>
+					<Id>
+						<OrgId>
+							<BICOrBEI>POFICHBE</BICOrBEI>
+						</OrgId>
+					</Id>
+				</Orgtr>
+				<Rsn>
+					<Cd>NARR</Cd>
+				</Rsn>
+				<AddtlInf>1297193;Sammelauftrag ohne ausführbaren Einzelauftrag
+				</AddtlInf>
+			</StsRsnInf>
+			<TxInfAndSts>
+				<OrgnlInstrId>10000289</OrgnlInstrId>
+				<OrgnlEndToEndId>10000289</OrgnlEndToEndId>
+				<TxSts>RJCT</TxSts>
+				<StsRsnInf>
+					<Rsn>
+						<Cd>CUST</Cd>
+					</Rsn>
+					<AddtlInf>1045520;Einzelauftrag durch Kunde annulliert</AddtlInf>
+				</StsRsnInf>
+				<OrgnlTxRef>
+					<IntrBkSttlmDt>2018-10-29</IntrBkSttlmDt>
+					<ReqdExctnDt>2018-10-29</ReqdExctnDt>
+				</OrgnlTxRef>
+			</TxInfAndSts>
+		</OrgnlPmtInfAndSts>
+	</CstmrPmtStsRpt>
+</Document>

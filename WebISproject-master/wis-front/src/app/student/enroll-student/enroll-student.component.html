@@ -1,0 +1,21 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-2">
+      <h3>Enroll Student In First Year!</h3>
+      
+        <div>
+          <select [(value)]="selectedStudent" (change)="setStudent($event.target.value)"  >
+            <option *ngFor="let s of student;" [value]="s.id">{{s.firstName}} {{s.lastName}} {{s.cardNumber}}</option>
+          </select>
+        </div>
+
+        <div>
+          <select [(value)]="selectedStudyProgram" (change)="setStudyProgram($event.target.value)"  >
+            <option *ngFor="let sp of studyProgram;" [value]="sp.id">{{sp.name}}</option>
+          </select>
+        </div>
+
+        <button class="btn btn-success"  (click)="enrollStudent()">Enroll</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-2">
+      <h3>Edit the Teacher !</h3>
+      <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label class="col-xs-4">First Name: </label>
+          <input type="text" class="form-control" formControlName="firstName" #firstName
+            [(ngModel)]="teacher.firstName" />
+        </div>
+        <div
+          *ngIf="angForm.controls['firstName'].invalid && (angForm.controls['firstName'].dirty || angForm.controls['firstName'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['firstName'].errors.required">
+            First Name is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4">Last Name: </label>
+          <input type="text" class="form-control" formControlName="lastName" #lastName [(ngModel)]="teacher.lastName" />
+        </div>
+        <div
+          *ngIf="angForm.controls['lastName'].invalid && (angForm.controls['lastName'].dirty || angForm.controls['lastName'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['lastName'].errors.required">
+            Lastname is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-4">Personal ID: </label>
+          <input type="text" class="form-control" formControlName="personalIdentificationNumber"
+            #personalIdentificationNumber [(ngModel)]="teacher.personalIdentificationNumber" />
+        </div>
+        <div
+          *ngIf="angForm.controls['personalIdentificationNumber'].invalid && (angForm.controls['personalIdentificationNumber'].dirty || angForm.controls['personalIdentificationNumber'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="angForm.controls['personalIdentificationNumber'].errors.required">
+            Personal identification number is required.
+          </div>
+        </div>
+        <div class="form-group" style="padding-top:20px;">
+          <button (click)="updateTeacher(firstName.value, lastName.value, personalIdentificationNumber.value)"
+            [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary"><i class="fa fa-refresh"></i>
+            Update Teacher
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

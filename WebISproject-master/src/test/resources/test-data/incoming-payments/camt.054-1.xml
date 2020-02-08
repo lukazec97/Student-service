@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document
+	xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.04"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.04 camt.054.001.04.xsd">
+	<BkToCstmrDbtCdtNtfctn>
+		<GrpHdr>
+			<MsgId>20190117375204072432655</MsgId>
+			<CreDtTm>2019-01-17T01:46:07</CreDtTm>
+			<MsgPgntn>
+				<PgNb>1</PgNb>
+				<LastPgInd>true</LastPgInd>
+			</MsgPgntn>
+			<AddtlInf>Productive</AddtlInf>
+		</GrpHdr>
+		<Ntfctn>
+			<Id>20190117375204072432655</Id>
+			<CreDtTm>2019-01-17T01:46:07</CreDtTm>
+			<Acct>
+				<Id>
+					<IBAN>CH1609000000142211073</IBAN>
+				</Id>
+				<Ownr>
+					<Nm>Creditfolio AG</Nm>
+				</Ownr>
+			</Acct>
+			<Ntry>
+				<Amt Ccy="CHF">30000.00</Amt>
+				<CdtDbtInd>DBIT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2018-10-03</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2018-10-03</Dt>
+				</ValDt>
+				<BkTxCd>
+					<Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>ICDT</Cd>
+							<SubFmlyCd>AUTT</SubFmlyCd>
+						</Fmly>
+					</Domn>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<MsgId>177</MsgId>
+							<PmtInfId>177</PmtInfId>
+							<InstrId>10000233</InstrId>
+							<EndToEndId>10000233</EndToEndId>
+						</Refs>
+						<Amt Ccy="CHF">30000.00</Amt>
+						<CdtDbtInd>DBIT</CdtDbtInd>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="CHF">30000.00</Amt>
+							</InstdAmt>
+							<CntrValAmt>
+								<Amt Ccy="CHF">30000.00</Amt>
+							</CntrValAmt>
+						</AmtDtls>
+						<BkTxCd>
+							<Domn>
+								<Cd>PMNT</Cd>
+								<Fmly>
+									<Cd>ICDT</Cd>
+									<SubFmlyCd>DMCT</SubFmlyCd>
+								</Fmly>
+							</Domn>
+						</BkTxCd>
+						<RltdPties>
+							<DbtrAcct>
+								<Id>
+									<IBAN>CH1609000000142211073</IBAN>
+								</Id>
+							</DbtrAcct>
+							<Cdtr>
+								<Nm>Krndija Cedomir</Nm>
+								<PstlAdr>
+									<AdrLine>Hasenbüelstrasse 5 8625 Gossau ZH</AdrLine>
+								</PstlAdr>
+							</Cdtr>
+							<CdtrAcct>
+								<Id>
+									<IBAN>CH8804835173632380000</IBAN>
+								</Id>
+							</CdtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<CdtrAgt>
+								<FinInstnId>
+									<Nm>HYPOTHEKARBANK LENZBURG AG</Nm>
+									<PstlAdr>
+										<Ctry>CH</Ctry>
+										<AdrLine>BAHNHOFSTRASSE 2 5600 LENZBURG</AdrLine>
+									</PstlAdr>
+								</FinInstnId>
+							</CdtrAgt>
+						</RltdAgts>
+						<RmtInf>
+							<Ustrd>Creditfolio Loan</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+		</Ntfctn>
+	</BkToCstmrDbtCdtNtfctn>
+</Document>

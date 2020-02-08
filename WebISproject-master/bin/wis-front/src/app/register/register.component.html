@@ -1,0 +1,257 @@
+<body>
+  <div class="container login-container" style="margin-left:480px; ">
+    <h2 style="margin-top:20px;">Register User as: </h2>
+    <div class="btn-group" role="group" aria-label="Log In As:">
+      <button (click)="setStudentRole()" type="button" class="btn btn-outline-dark"><i class="fa fa-user-o"></i>
+        Student</button>
+      <button (click)="setTeacherRole()" type="button" class="btn btn-outline-dark"><i class="fa fa-user"></i>
+        Teacher</button>
+      <button (click)="setAdminRole()" type="button" class="btn btn-outline-dark"><i class="fa fa-user-secret"></i>
+        Admin</button>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6 login-form-2" *ngIf="showStudentFields">
+        <h3>Register user</h3>
+        <form [formGroup]="angFormStudent" novalidate>
+          <div class="form-group">
+            <label class="col-xs-4">Username: </label>
+            <input type="text" class="form-control" formControlName="username" #username
+              placeholder="Enter your username" />
+          </div>
+          <div
+            *ngIf="angFormStudent.controls['username'].invalid && (angFormStudent.controls['username'].dirty || angFormStudent.controls['username'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormStudent.controls['username'].errors.required">
+              Username is required.
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4">Password: </label>
+            <input type="password" class="form-control" formControlName="pass" #pass
+              placeholder="Enter your password" />
+          </div>
+          <div
+            *ngIf="angFormStudent.controls['pass'].invalid && (angFormStudent.controls['pass'].dirty || angFormStudent.controls['pass'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormStudent.controls['pass'].errors.required">
+              Password is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-4">Firstname: </label>
+            <input type="text" class="form-control" formControlName="firstname" #firstname
+              placeholder="Enter your firstname" />
+          </div>
+          <div
+            *ngIf="angFormStudent.controls['firstname'].invalid && (angFormStudent.controls['firstname'].dirty || angFormStudent.controls['firstname'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormStudent.controls['firstname'].errors.required">
+              Firstname is required.
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-xs-4">Lastname: </label>
+            <input type="text" class="form-control" formControlName="lastname" #lastname
+              placeholder="Enter your lastname" />
+          </div>
+          <div
+            *ngIf="angFormStudent.controls['lastname'].invalid && (angFormStudent.controls['lastname'].dirty || angFormStudent.controls['lastname'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormStudent.controls['lastname'].errors.required">
+              Lastname is required.
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="col-xs-4">Card Number: (STUDENTS ONLY!) </label>
+            <input type="text" class="form-control" formControlName="cardnumber" #cardnumber
+              placeholder="Enter your card number" />
+          </div>
+          <div
+            *ngIf="angFormStudent.controls['cardnumber'].invalid && (angFormStudent.controls['cardnumber'].dirty || angFormStudent.controls['cardnumber'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormStudent.controls['cardnumber'].errors.required">
+              Card numbers is required.
+            </div>
+          </div>
+
+
+
+
+
+          <div class="form-group" style="padding-top: 30px;">
+            <button
+              (click)="registerStudent(username.value, pass.value, firstname.value, lastname.value, cardnumber.value)"
+              [disabled]="angFormStudent.pristine || angFormStudent.invalid" class="btn btn-outline-dark"><i
+                class="fa fa-user-plus"></i>
+              Register Student
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 login-form-2" *ngIf="showTeacherFields">
+        <h3>Register user</h3>
+        <form [formGroup]="angFormTeacher" novalidate>
+          <div class="form-group">
+            <label class="col-xs-4">Username: </label>
+            <input type="text" class="form-control" formControlName="username" #username
+              placeholder="Enter your username" />
+          </div>
+          <div
+            *ngIf="angFormTeacher.controls['username'].invalid && (angFormTeacher.controls['username'].dirty || angFormTeacher.controls['username'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormTeacher.controls['username'].errors.required">
+              Username is required.
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4">Password: </label>
+            <input type="password" class="form-control" formControlName="pass" #pass
+              placeholder="Enter your password" />
+          </div>
+          <div
+            *ngIf="angFormTeacher.controls['pass'].invalid && (angFormTeacher.controls['pass'].dirty || angFormTeacher.controls['pass'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormTeacher.controls['pass'].errors.required">
+              Password is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-4">Firstname: </label>
+            <input type="text" class="form-control" formControlName="firstname" #firstname
+              placeholder="Enter your firstname" />
+          </div>
+          <div
+            *ngIf="angFormTeacher.controls['firstname'].invalid && (angFormTeacher.controls['firstname'].dirty || angFormTeacher.controls['firstname'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormTeacher.controls['firstname'].errors.required">
+              Firstname is required.
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-xs-4">Lastname: </label>
+            <input type="text" class="form-control" formControlName="lastname" #lastname
+              placeholder="Enter your lastname" />
+          </div>
+          <div
+            *ngIf="angFormTeacher.controls['lastname'].invalid && (angFormTeacher.controls['lastname'].dirty || angFormTeacher.controls['lastname'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormTeacher.controls['lastname'].errors.required">
+              Lastname is required.
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="col-xs-4">Personal ID: (TEACHERS ONLY!) </label>
+            <input type="text" class="form-control" formControlName="personalid" #personalid
+              placeholder="Enter your personal id" />
+          </div>
+          <div
+            *ngIf="angFormTeacher.controls['personalid'].invalid && (angFormTeacher.controls['personalid'].dirty || angFormTeacher.controls['personalid'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormTeacher.controls['personalid'].errors.required">
+              Personal ID is required.
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="form-group" style="padding-top: 30px;">
+            <button
+              (click)="registerTeacher(username.value, pass.value, firstname.value, lastname.value, personalid.value)"
+              [disabled]="angFormTeacher.pristine || angFormTeacher.invalid" class="btn btn-outline-dark"><i
+                class="fa fa-user-plus"></i>
+              Register Teacher
+            </button>
+          </div>
+
+
+        </form>
+      </div>
+
+      <div class="col-md-6 login-form-2" *ngIf="showAdminFields">
+        <h3>Register user</h3>
+        <form [formGroup]="angFormAdmin" novalidate>
+          <div class="form-group">
+            <label class="col-xs-4">Username: </label>
+            <input type="text" class="form-control" formControlName="username" #username
+              placeholder="Enter your username" />
+          </div>
+          <div
+            *ngIf="angFormAdmin.controls['username'].invalid && (angFormAdmin.controls['username'].dirty || angFormAdmin.controls['username'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormAdmin.controls['username'].errors.required">
+              Username is required.
+            </div>
+
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4">Password: </label>
+            <input type="password" class="form-control" formControlName="pass" #pass
+              placeholder="Enter your password" />
+          </div>
+          <div
+            *ngIf="angFormAdmin.controls['pass'].invalid && (angFormAdmin.controls['pass'].dirty || angFormAdmin.controls['pass'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormAdmin.controls['pass'].errors.required">
+              Password is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-xs-4">Firstname: </label>
+            <input type="text" class="form-control" formControlName="firstname" #firstname
+              placeholder="Enter your firstname" />
+          </div>
+          <div
+            *ngIf="angFormAdmin.controls['firstname'].invalid && (angFormAdmin.controls['firstname'].dirty || angFormAdmin.controls['firstname'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormAdmin.controls['firstname'].errors.required">
+              Firstname is required.
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-xs-4">Lastname: </label>
+            <input type="text" class="form-control" formControlName="lastname" #lastname
+              placeholder="Enter your lastname" />
+          </div>
+          <div
+            *ngIf="angFormAdmin.controls['lastname'].invalid && (angFormAdmin.controls['lastname'].dirty || angFormAdmin.controls['lastname'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="angFormAdmin.controls['lastname'].errors.required">
+              Lastname is required.
+            </div>
+          </div>
+
+
+
+          <div class="form-group" style="padding-top: 30px;">
+            <button (click)="registerAdmin(username.value, pass.value, firstname.value, lastname.value)"
+              [disabled]="angFormAdmin.pristine || angFormAdmin.invalid" class="btn btn-outline-dark"><i
+                class="fa fa-user-plus"></i>
+              Register Admin
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

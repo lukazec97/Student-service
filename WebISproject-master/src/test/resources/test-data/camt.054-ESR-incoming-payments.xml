@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.04" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:camt.054.001.04 camt.054.001.04.xsd">
+  <BkToCstmrDbtCdtNtfctn>
+    <GrpHdr>
+      <MsgId>20181026375204078661300</MsgId>
+      <CreDtTm>2018-10-26T23:42:54</CreDtTm>
+      <MsgPgntn>
+        <PgNb>1</PgNb>
+        <LastPgInd>true</LastPgInd>
+      </MsgPgntn>
+      <AddtlInf>Productive</AddtlInf>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>20181026375204078661302</Id>
+      <CreDtTm>2018-10-26T23:42:54</CreDtTm>
+      <FrToDt>
+        <FrDtTm>2018-10-26T00:00:00</FrDtTm>
+        <ToDtTm>2018-10-26T23:59:59</ToDtTm>
+      </FrToDt>
+      <Acct>
+        <Id>
+          <IBAN>CH6309000000250097798</IBAN>
+        </Id>
+        <Ownr>
+          <Nm>Creditfolio AG Basel</Nm>
+        </Ownr>
+      </Acct>
+      <Ntry>
+        <NtryRef>011047973</NtryRef>
+        <Amt Ccy="CHF">4786.30</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <RvslInd>false</RvslInd>
+        <Sts>BOOK</Sts>
+        <BookgDt>
+          <Dt>2018-10-26</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2018-10-29</Dt>
+        </ValDt>
+        <AcctSvcrRef>299820003JJ516PU</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>VCOM</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <Chrgs>
+          <TtlChrgsAndTaxAmt Ccy="CHF">8.38</TtlChrgsAndTaxAmt>
+          <Rcrd>
+            <Amt Ccy="CHF">0.08</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>4</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+          <Rcrd>
+            <Amt Ccy="CHF">2.40</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>1</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+          <Rcrd>
+            <Amt Ccy="CHF">2.95</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>2</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+          <Rcrd>
+            <Amt Ccy="CHF">2.95</Amt>
+            <CdtDbtInd>DBIT</CdtDbtInd>
+            <ChrgInclInd>false</ChrgInclInd>
+            <Tp>
+              <Prtry>
+                <Id>3</Id>
+              </Prtry>
+            </Tp>
+          </Rcrd>
+        </Chrgs>
+        <NtryDtls>
+          <Btch>
+            <NbOfTxs>5</NbOfTxs>
+          </Btch>
+          <TxDtls>
+            <Refs>
+              <MsgId>90-7247839</MsgId>
+              <AcctSvcrRef>181026CH03JBE19E</AcctSvcrRef>
+              <InstrId>67704987-1-1</InstrId>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>181026CH03JBE19E</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">1474.50</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>John Doe</Nm>
+                <PstlAdr>
+                  <StrtNm>Some street</StrtNm>
+                  <BldgNb>54</BldgNb>
+                  <PstCd>3027</PstCd>
+                  <TwnNm>Bern</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH6309000000250097798</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERN</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000001000015700100000982</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2018-10-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>181026CH03JCHX33</AcctSvcrRef>
+              <InstrId>20181025609202000100132</InstrId>
+              <Prtry>
+                <Tp>04</Tp>
+                <Ref>20181025609202000100132</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">1499.80</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">4.19</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">2.95</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>2</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">1.20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>1</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERN</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000001000020700100001703</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?1</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2018-10-25T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <AcctSvcrRef>181026CH03JCHX34</AcctSvcrRef>
+              <InstrId>20181025609202000100133</InstrId>
+              <Prtry>
+                <Tp>14</Tp>
+                <Ref>20181025609202000100133</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">1027.20</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>CNTR</Cd>
+                  <SubFmlyCd>CDPT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <Chrgs>
+              <TtlChrgsAndTaxAmt Ccy="CHF">4.19</TtlChrgsAndTaxAmt>
+              <Rcrd>
+                <Amt Ccy="CHF">1.20</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>1</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">2.95</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>3</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+              <Rcrd>
+                <Amt Ccy="CHF">0.04</Amt>
+                <CdtDbtInd>DBIT</CdtDbtInd>
+                <ChrgInclInd>false</ChrgInclInd>
+                <Tp>
+                  <Prtry>
+                    <Id>4</Id>
+                  </Prtry>
+                </Tp>
+              </Rcrd>
+            </Chrgs>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERN</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000001000020600100001691</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?1</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2018-10-25T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <MsgId>90-7305956</MsgId>
+              <AcctSvcrRef>181026CH03JDL5ZI</AcctSvcrRef>
+              <InstrId>67823743-1-1</InstrId>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>181026CH03JDL5ZI</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">350.70</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>NameX SurnameY</Nm>
+                <PstlAdr>
+                  <StrtNm>Other street</StrtNm>
+                  <BldgNb>62</BldgNb>
+                  <PstCd>4054</PstCd>
+                  <TwnNm>Basel</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH6309000000250097798</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERN</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000001000016800100001088</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2018-10-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+          <TxDtls>
+            <Refs>
+              <MsgId>90-7423693</MsgId>
+              <AcctSvcrRef>181026CH03JEENWF</AcctSvcrRef>
+              <InstrId>67726874-1-1</InstrId>
+              <Prtry>
+                <Tp>01</Tp>
+                <Ref>181026CH03JEENWF</Ref>
+              </Prtry>
+            </Refs>
+            <Amt Ccy="CHF">434.10</Amt>
+            <CdtDbtInd>CRDT</CdtDbtInd>
+            <BkTxCd>
+              <Domn>
+                <Cd>PMNT</Cd>
+                <Fmly>
+                  <Cd>RCDT</Cd>
+                  <SubFmlyCd>AUTT</SubFmlyCd>
+                </Fmly>
+              </Domn>
+            </BkTxCd>
+            <RltdPties>
+              <Dbtr>
+                <Nm>PersonM PersonN</Nm>
+                <PstlAdr>
+                  <StrtNm>Streetxyz</StrtNm>
+                  <BldgNb>32</BldgNb>
+                  <PstCd>4055</PstCd>
+                  <TwnNm>Basel</TwnNm>
+                  <Ctry>CH</Ctry>
+                </PstlAdr>
+              </Dbtr>
+              <DbtrAcct>
+                <Id>
+                  <IBAN>CH6309000000250097798</IBAN>
+                </Id>
+              </DbtrAcct>
+            </RltdPties>
+            <RltdAgts>
+              <DbtrAgt>
+                <FinInstnId>
+                  <BICFI>POFICHBEXXX</BICFI>
+                  <Nm>POSTFINANCE AG</Nm>
+                  <PstlAdr>
+                    <AdrLine>MINGERSTRASSE 20</AdrLine>
+                    <AdrLine>3030 BERN</AdrLine>
+                  </PstlAdr>
+                </FinInstnId>
+              </DbtrAgt>
+            </RltdAgts>
+            <RmtInf>
+              <Strd>
+                <CdtrRefInf>
+                  <Tp>
+                    <CdOrPrtry>
+                      <Prtry>ISR Reference</Prtry>
+                    </CdOrPrtry>
+                  </Tp>
+                  <Ref>000000001000025500100001392</Ref>
+                </CdtrRefInf>
+                <AddtlRmtInf>?REJECT?0</AddtlRmtInf>
+              </Strd>
+            </RmtInf>
+            <RltdDts>
+              <AccptncDtTm>2018-10-26T20:00:00</AccptncDtTm>
+            </RltdDts>
+          </TxDtls>
+        </NtryDtls>
+        <AddtlNtryInf>SAMMELGUTSCHRIFT ESR VERARBEITUNG VOM 26.10.2018 KUNDENNUMMER 01-104797-3 PAKET ID: 181026CH00000DN3</AddtlNtryInf>
+      </Ntry>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctn>
+</Document>

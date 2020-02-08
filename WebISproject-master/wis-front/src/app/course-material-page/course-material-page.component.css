@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+.list-group-item {
+  background-color: #0078f8;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  border: 1px solid black;
+  
+}
+
+.text {
+  text-align: center;
+  padding-top: 10px;
+}

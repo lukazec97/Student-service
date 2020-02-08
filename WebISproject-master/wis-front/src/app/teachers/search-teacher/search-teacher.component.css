@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .8rem;
+    margin-left: 440px;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 10px;
+}
+
+td {
+    text-align: center;
+}
+tfoot {
+    background-color: #3f87a6;
+    color: #fff;
+}
+
+tbody {
+    background-color: #e4f0f5;
+}
+
+
+.search{
+    position: absolute;
+    top: 0%;
+    right: 10px;
+    left: 75%;
+    bottom:20%;
+}
+
+body {
+    min-height: 80vh;
+    position: relative;
+    margin: 0;
+  }

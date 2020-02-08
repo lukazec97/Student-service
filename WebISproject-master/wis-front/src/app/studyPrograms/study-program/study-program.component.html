@@ -1,0 +1,62 @@
+<div>
+  <header class="bg-primary py-5 mb-5" style="height: 250px;">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">{{nameOfCenter}}</h1>
+          <p class="lead mb-5 text-white-50">Some words about {{nameOfCenter}}...</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>{{name}} Study Program</h2>
+        <hr>
+        <p>Some words about {{name}} study program here...</p>
+      </div>
+      <div class="col-md-4 mb-5" style="padding-left:150px; padding-bottom: 20px;">
+        <img src="{{img_src}}" alt="">
+
+      </div>
+    </div>
+    <div class="container">
+      <h3 style="text-align: center;">Check the subjects of each year on this study program</h3>
+      <hr>
+      <br>
+      <div class="row">
+        <div class="col-md-5 col-lg-4 col-xl-3" *ngFor="let yos of yearOfStudies | orderBy: 'numberOfYear'; let i = index; ">
+          <nav id="leftnav">
+            <div class="list-group indicator-plus">
+              <h3 style="text-align: center;">{{yos.title}}</h3>
+              <a href="#{{cssId[i]}}" class="list-group-item active" data-toggle="collapse" data-parent="#leftnav"><i
+                  class="fa fa-arrow-circle-o-down"></i>
+                Check the subjects</a>
+              <div class="collapse list-group-submenu" id="{{cssId[i]}}">
+                <div id="accordion">
+                  <div class="card" *ngFor="let course of yos.courses; let j = index">
+                    <div class="card-header" id="headingOne" class="list-group-item">
+                      <h5 class="mb-0">
+                        <button routerLink="courseMaterialPage" (click)="punjenje(course.id)" class="list-group-item" data-toggle="collapse" data-target="#collapseOne"
+                          aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-arrow-circle-o-down"></i>
+                          {{course.title}}
+                        </button>
+                      </h5>
+                    </div>
+                    <!-- <div id="collapseOne" class="collapse" aria-labelledby="collapseOne" data-parent="#collapseOne">
+                      <div class="card-body">
+                        Something about {{course.title}}
+                      </div>
+                    </div> -->
+                  </div>
+        
+                </div>
+
+              </div>
+            </div>
+          </nav>
+        </div>
+

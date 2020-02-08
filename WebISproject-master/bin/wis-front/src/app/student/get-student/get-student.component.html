@@ -1,0 +1,43 @@
+<body>
+    <div class="container">
+        <table id="example" class="table table-responsive w-100 d-block d-md-table" style="width:100%">
+            <thead style="background: #090a11;">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Card Number</th>
+                    <th style="width: 53%;">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let student of students">
+                    <td style="text-align: center;">{{ student?.firstName }}</td>
+                    <td style="text-align: center;"> {{ student?.lastName }}</td>
+                    <td style="text-align: center;">{{ student?.cardNumber }}</td>
+                    <td>
+                        <a [routerLink]="[student.id]" class="btn btn-primary">
+                            <i class="fa fa-pencil-square"></i> Edit User</a>
+                        &nbsp;
+                        <a (click)="deleteStudent(student.id)" class="btn btn-danger"> <i class="fa fa-trash-o"></i>
+                            Delete</a>
+                        &nbsp;
+                        <a (click)="downloadStudentXML(student.id)" class="btn btn-secondary"> <i
+                                class="fa fa-download"></i> Download XML</a>
+                        &nbsp;
+                        <a (click)="downloadStudentPDF(student.id)" class="btn btn-secondary"> <i
+                                class="fa fa-download"></i> Download PDF</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="downloadAll">
+        <a (click)="downloadAllStudentsXML()" class="btn btn-secondary"> <i class="fa fa-download"></i> Download All As
+            XML</a>
+        &nbsp;
+        <a (click)="downloadAllStudentsPDF()" class="btn btn-secondary"> <i class="fa fa-download"></i> Download All As
+            PDF</a>
+    </div>
+</body>

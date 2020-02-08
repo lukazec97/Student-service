@@ -1,0 +1,113 @@
+<body>
+  <div class="container-fluid">
+    <div class="row d-flex d-md-block flex-nowrap wrapper">
+      <div class="col-md-3 float-left col-1 pl-0 pr-0 collapse width " id="sidebar">
+        <div class="list-group border-0 card text-center text-md-left">
+          <div *ngIf="role=='ROLE_ADMIN'">
+            <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse"
+              data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span
+                class="d-none d-md-inline">Admin Panel</span>
+            </a>
+            <div class="collapse" id="menu1">
+              <div>
+                <a routerLink="register" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-plus-circle"></i>
+                  Register User
+                </a>
+                <a routerLink="student/enrollfirst" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-th-list"></i>
+                  Enroll Student In First Year
+                </a>
+                <a routerLink="students" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-th-list"></i>
+                  List Of Students
+                </a>
+                <a routerLink="findStudentByFirstName" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-search"></i>
+                  Search Students
+                </a>
+                <a routerLink="teacher" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-th-list"></i>
+                  List Of Teachers
+                </a>
+                <a routerLink="findTeacherByFirstName" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-search"></i>
+                  Search Teachers
+                </a>
+                <a routerLink="createCenter" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-plus-circle"></i>
+                  Create Center
+                </a>
+                <a routerLink="createSp" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-plus-circle"></i>
+                  Create Study Program
+                </a>
+                <a routerLink="createYos" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-plus-circle"></i>
+                  Create Year Of Study
+                </a>
+                <a routerLink="createCourse" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-plus-circle"></i>
+                  Create Course
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div *ngIf="role=='ROLE_STUDENT'">
+            <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse"
+              data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span
+                class="d-none d-md-inline">Student Panel</span>
+            </a>
+            <div class="collapse" id="menu1">
+              <div>
+                <a routerLink="courseMaterialPage" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-book"></i>
+                  Course Material Page
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="role=='ROLE_TEACHER'">
+            <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse"
+              data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i> <span
+                class="d-none d-md-inline">Teacher Panel</span>
+            </a>
+            <div class="collapse" id="menu1">
+              <div>
+                <a routerLink="courseMaterialPage" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-book"></i>
+                  Course Material Page
+                </a>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+      <main class="col-md-9 col px-5 pl-md-2 pt-2 main mx-auto">
+        <a href="#" data-target="#sidebar" data-toggle="collapse" aria-expanded="false"><i
+            class="fa fa-navicon fa-2x py-2 p-1"></i></a>
+        <h2>Welcome {{username}} !</h2>
+        <p class="lead">Your account info...</p>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <button role="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo" aria-expanded="false">
+              Show/Hide
+            </button>
+            <div style="margin-top: 50px" id="demo" class="width collapse show" aria-expanded="false" >
+              <div class="list-group" style="width: 400px;">
+                <p>First name: {{firstname}}</p>
+                <p>Last name: {{lastname}}</p>
+                <p>Note: {{note}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>

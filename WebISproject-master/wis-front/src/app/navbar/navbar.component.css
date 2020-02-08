@@ -1,0 +1,10 @@
+.fa.fa-navicon {
+    color:lightblue;
+  }
+  .btn {
+    font-size:0.875em;
+    display:block;
+    left:-60px;
+    margin-top:35px;
+    width:100%;
+  }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document
+	xmlns="http://www.six-interbank-clearing.com/de/pain.002.001.03.ch.02.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.six-interbank-clearing.com/de/pain.002.001.03.ch.02.xsd pain.002.001.03.ch.02.xsd">
+	<CstmrPmtStsRpt>
+		<GrpHdr>
+			<MsgId>20180513375204022429952</MsgId>
+			<CreDtTm>2018-05-14T01:15:23</CreDtTm>
+			<InitgPty>
+				<Id>
+					<OrgId>
+						<BICOrBEI>POFICHBE</BICOrBEI>
+					</OrgId>
+				</Id>
+			</InitgPty>
+		</GrpHdr>
+		<OrgnlGrpInfAndSts>
+			<OrgnlMsgId>MSG-2018-05-11T09:22:08</OrgnlMsgId>
+			<OrgnlMsgNmId>pain.001.001.03.ch.02</OrgnlMsgNmId>
+		</OrgnlGrpInfAndSts>
+		<OrgnlPmtInfAndSts>
+			<OrgnlPmtInfId>PMTINF-2018-05-11T09:22:08-1</OrgnlPmtInfId>
+			<PmtInfSts>PART</PmtInfSts>
+			<TxInfAndSts>
+				<OrgnlInstrId>24</OrgnlInstrId>
+				<OrgnlEndToEndId>91306EE950604A579F265F899B5E36BD</OrgnlEndToEndId>
+				<TxSts>RJCT</TxSts>
+				<StsRsnInf>
+					<Rsn>
+						<Cd>NARR</Cd>
+					</Rsn>
+					<AddtlInf>1301830;Kombination aus Zielland und Währung ungültig
+					</AddtlInf>
+				</StsRsnInf>
+				<OrgnlTxRef>
+					<IntrBkSttlmDt>2018-05-14</IntrBkSttlmDt>
+					<ReqdColltnDt>2018-05-14</ReqdColltnDt>
+				</OrgnlTxRef>
+			</TxInfAndSts>
+			<TxInfAndSts>
+				<OrgnlInstrId>26</OrgnlInstrId>
+				<OrgnlEndToEndId>F73C993A3E9D43A09246CBAEFE85E34A</OrgnlEndToEndId>
+				<TxSts>RJCT</TxSts>
+				<StsRsnInf>
+					<Rsn>
+						<Cd>NARR</Cd>
+					</Rsn>
+					<AddtlInf>1301830;Kombination aus Zielland und Währung ungültig
+					</AddtlInf>
+				</StsRsnInf>
+				<OrgnlTxRef>
+					<IntrBkSttlmDt>2018-05-14</IntrBkSttlmDt>
+					<ReqdColltnDt>2018-05-14</ReqdColltnDt>
+				</OrgnlTxRef>
+			</TxInfAndSts>
+		</OrgnlPmtInfAndSts>
+	</CstmrPmtStsRpt>
+</Document>

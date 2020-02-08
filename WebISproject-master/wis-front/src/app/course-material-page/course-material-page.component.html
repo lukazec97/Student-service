@@ -1,0 +1,67 @@
+<body style="margin-bottom: 200px">
+  <div>
+    <h2 style="text-align:center;">Course name: {{title}}</h2>
+    <div style="display: inline-block;">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" [src]="transform(pic, mimetype)" alt="" >
+        </div>
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col">
+        <h2 class="text">Student Shortcuts</h2>
+        <a routerLink="#" class="list-group-item list-group-item-action">About Course</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Sylabus</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Informations</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Student Results</a>
+      </div>
+      <div class="col">
+        <h2 class="text">Lectures</h2>
+        <a routerLink="#" class="list-group-item list-group-item-action">First colloquium</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Second colloquium</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Final Exam</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Additional material</a>
+      </div>
+      <div class="col">
+        <h2 class="text">Exercises</h2>
+        <a routerLink="#" class="list-group-item list-group-item-action">First colloquium</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Second colloquium</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Final Exam</a>
+        <a routerLink="#" class="list-group-item list-group-item-action">Additional material</a>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="role == 'ROLE_TEACHER'">
+    Topic: <input type="text" name="tema" id="tema" [(ngModel)]='temaObavestenja'>
+    <br>
+    Content: <input type="text" name="sadrzaj" id="sadrzaj" [(ngModel)]='sadrzajObavestenja'>
+    <br>
+    Date: <input type="date" name="datum" id="datum" [(ngModel)]='datumObavestenja'>
+    <br>
+    <button (click)="ubaciObavestenja()">Dodaj obavestenje</button>
+  </div>
+  <hr>
+  <div style="overflow-y:scroll; overflow-x:hidden; height:400px; margin-bottom: 30px; text-align: center" *ngIf="prikazi">
+    <div *ngFor='let o of svaObavestenja; let i = index;'>
+      <div *ngIf='o.predmet == title'>
+        Post number: {{i+1}}
+        <br>
+        Teacher: {{o.usernameProf}}
+        <br>
+        Topic: {{o.tema}}
+        <br>
+        Content: {{o.sadrzah}}
+        <br>
+        Date: {{o.datum}}
+        <hr>
+      </div>
+    </div>
+  </div> 
+  <div style="text-align: center">
+    <button style="" class="btn btn-outline-primary" (click)="dobaviObavestenja()">Get posts</button>
+    <button style="" class="btn btn-outline-danger" (click)="zatvoriObavestenja()">Close</button>
+  </div>
+
+
+</body>

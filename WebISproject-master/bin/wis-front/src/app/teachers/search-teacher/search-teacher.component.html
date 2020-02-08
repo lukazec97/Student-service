@@ -1,0 +1,28 @@
+<body>
+  <div style="width: 300px;" class="search">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="firstName" name="firstName"
+          placeholder="Search Teachers By Name">
+      </div>
+    </form>
+  </div>
+  <ul>
+    <br>
+    <table *ngFor="let teacher of teachers">
+      <tbody>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Personal ID</td>
+        </tr>
+        <tr>
+          <td>{{teacher?.firstName}}</td>
+          <td>{{teacher?.lastName}}</td>
+          <td>{{teacher?.personalIdentificationNumber}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ul>
+</body>

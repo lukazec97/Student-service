@@ -1,0 +1,38 @@
+<body>
+  <div style="width: 300px;" class="search">
+    <form (ngSubmit)="searchSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="firstName" name="firstName"
+          placeholder="Search Students By Name">
+      </div>
+    </form>
+    <!-- <form (ngSubmit)="onSubmitLast()">
+    <div class="form-group">
+      <label for="LastName">Last Name: </label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="lastName" name="lastName">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form> -->
+  </div>
+  <ul>
+    <br>
+    <table *ngFor="let student of students">
+      <tbody>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Card Number</td>
+        </tr>
+        <tr>
+          <td>{{student?.firstName}}</td>
+          <td>{{student?.lastName}}</td>
+          <td>{{student?.cardNumber}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ul>
+</body>
